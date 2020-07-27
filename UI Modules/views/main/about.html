@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/resert.css">
+    <link rel="stylesheet" href="/public/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/nav.css">
+    <link rel="stylesheet" href="/public/css/about.css">
+    <link rel="stylesheet" href="/public/css/footer.css">   
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=Go9SQWsVYtKy74jrHVsGIwzHTN49kF9T"></script>
+    
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="navFixed"></nav>
+    <!-- 头部 -->
+    <div class="headBg">
+        <div class="headTitle">— 关于我们 —</div>
+        <div class="headTxt">ABOUT US</div>
+    </div>
+    <!-- 说明 -->
+    <div class="container">
+        <div class="col-md-7">
+            <span class="contentTitle">关于我们</span>
+            <span class="contentTitleEng">/ ABOUT</span>
+            <div class="contentTxt"> 由于互联网科技的迅猛发展和计算机的普及,前端网站的智能化检索功能也在飞速发展。
+                对前端网页功能的细致化研究能有效提高用户的问题搜索效率，进一步加深“以用户为核心”的准则，减少用户使用的认知障碍，
+                达到简洁而高效的操作。UI界面模板的智能化检索是本前端系统开发的核心，该设计是通过对前端大型智能搜索网页的实践分析，
+                针对系统自身用户界面、用户访问数据、用户详细请求、数据库UI界面模板，开发一套UI界面的智能模板系统。以实现UI界面模板的自动化检索、
+                系统的高效运转、用户数据的智能分析、用户需求智能化推荐等。
+                <br><br>    
+                UI界面进行智能化模板系统建设，对于前端页面制作、脚本语言开发及模板库的设计和优化均具有十分深远的意义。具体体现在以下几个方面：
+                系统自身UI界面的高效化且规范的制作，有利于提高用户对本系统实际认可。
+                系统和用户的交互以JavaScript核心进行具体开发，这有利于从根本提升用户对本系统的使用效率。
+                模板数据库的开发以SQL Server为核心设计开发。这有利于UI界面模板的高效存储与获取及可靠的安全性。
+            </div>
+        </div>
+        <div class="col-md-4 contentPho"></div>
+    </div>
+    <!-- 百度地图 -->
+    <div class="container contentMap">
+        <div class="col-md-7">
+            <div class="map" id="allmap"></div>
+        </div>
+        <div class="mapTxt col-md-4">
+            <i></i>
+            <p class="mapTitle">联系方式 / contact</p>
+            <i></i>
+            <p><i class="glyphicon glyphicon-earphone"></i>
+               &nbsp; 13207196768
+            </p>
+            <p><i class="glyphicon glyphicon-globe"></i>
+                &nbsp; www.codingztian.com
+            </p>
+            <p><i class="glyphicon glyphicon-envelope"></i>
+                &nbsp; codingztian@sina.com
+            </p>
+            <p><i class="glyphicon glyphicon-map-marker"></i>
+                &nbsp; 湖北省 武汉市 蔡甸区 长江大学
+            </p>
+            <i></i><i></i>
+            <p class="mapTitle">在线时间 / Online hours</p>
+            <p></p>
+            <p>上午：09:00-12:00</p>
+            <p>下午：14:00-17:00</p>
+            <p>晚间：19:00-21:00</p>
+        </div>
+    </div>
+    <!-- 脚注 -->
+    <div class="footer"></div>
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script src="/public/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/public/js/nav.js"></script>
+    <script src="/public/js/footer.js"></script>
+    <script type="text/javascript">
+        // 百度地图API功能
+        var map = new BMap.Map("allmap");
+        var point = new BMap.Point(114.0352266600, 30.5416358500);
+        map.centerAndZoom(point, 17);
+        var marker = new BMap.Marker(point); // 创建标注
+        // console.log(BMAP_ANIMATION_BOUNCE);
+        map.addOverlay(marker); // 将标注添加到地图中
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+        map.enableScrollWheelZoom(true);
+        
+    </script>
+</body>
+</html>

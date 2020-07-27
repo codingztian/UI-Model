@@ -1,0 +1,102 @@
+.headBg{
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.mask{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.maskTitle{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.maskContent{
+    /* height: 643px; */
+    height: 77vh;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    /* background-color: #cccccc; */
+    overflow: scroll;
+    cursor: pointer;
+}
+.maskContent>img{
+    width: 100%;
+}
+@media (max-width:465px){
+   .maskContent{
+    height: 65vh;
+   } 
+}
+
+.messageDiv{
+    height: 220px;
+    /* border: 1px solid yellowgreen; */
+}
+.messageTxt{
+    width: 100%;
+    height: 130px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: solid 1px #ececec;
+    background-color: #f5f5f5;
+    resize:none;
+    outline: honeydew;
+}
+.messageBtn{
+    float: right;
+    color: #ff510f;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 15px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ff510f;
+    cursor: pointer;
+}
+.messageBtn:hover{
+    color: #ff510f;
+}
+.messageList{
+    font-size: 16px;
+    min-height: 400px;
+}
+.notComment{
+    text-align: center;
+    padding-top: 60px;
+}
+.messageList>.row{
+    border-top: 1px solid #ececec;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+.list_pho{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("/public/img/bg/per1.png");
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center;
+}
+.list_name{
+    color: #999;
+    height: 35px;
+}
+.list_txt{
+    word-wrap:break-word;
+}
+.list_info{
+    color: #999;
+    height: 35px;
+    margin-top: 7px;
+}
+.list_time{
+    float: left;
+}
+/* 
+.list_like{
+    float: right;
+} 
+*/

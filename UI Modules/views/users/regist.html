@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册-智能UI界面库</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="/public/css/resert.css">
+    <link rel="stylesheet" href="/public/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="/public/css/nav.css">
+	<link rel="stylesheet" href="/public/css/loginAndreg.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+</head>
+
+<body>
+	<nav class="navFixed"></nav>
+	<div class="headBg">
+		<p class="headTitle">— 注册 —</p>
+		<p>已有账号 ！<a href="/users/login">立即登录</a></p>
+	</div>
+	<div class="container login">
+		<section class="form-horizontal col-sm-offset-2 col-sm-6">
+			<div class="form-group">
+				<label class="col-sm-3 control-label">用户名</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" name="username" id="username" placeholder="请设置您的用户名">
+					<span id="nameReg"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">登录密码</label>
+				<div class="col-sm-9">
+					<input type="password" class="form-control" name="userpwd" id="userpwd" placeholder="请设置您的密码">
+					<span id="pwdReg"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">确认密码</label>
+				<div class="col-sm-9">
+					<input type="password" class="form-control" name="_userpwd" id="_userpwd" placeholder="请确认您的密码">
+					<span id="_pwdReg"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">验证码</label>
+				<div class="codeFlex col-sm-9">
+					<canvas id="codeMa" class="col-xs-4"></canvas>
+					<input type="text" id="codetxt" class="col-xs-8" placeholder="点击验证码可切换">
+					<span id="codeReg"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9">
+					<button class="btn btn-info col-xs-12" id="btn">注册</button>
+				</div>
+			</div>
+		</section>
+		<div class="regError"></div>
+	</div>
+	<div class="footer"></div>
+
+	<script src="/public/js/jquery-1.11.3.js"></script>
+	<script src="/public/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/public/js/nav.js"></script>
+	<script src="/public/js/validationCode.js"></script>
+	<script src="/public/js/Regular.js"></script>
+    <script src="/public/js/footer.js"></script>
+	<script>
+		// 注册请求
+		// localStorage.removeItem("loginName");
+		$("#btn").click(function() {
+			if($("#username").val() && $("#userpwd").val() && $("#_userpwd").val()){
+				if(_UserName && _UserPwd && _NserPwdTwo) {	// _UserName && _UserPwd && UC_UserCode
+					$.ajax({
+						type: "POST",
+						url: "/regist",
+						data: {
+							"username": $("#username").val(),
+							"userpwd": $("#userpwd").val(),
+							"usertel": $("#usertel").val()
+						},
+						success: function (data) {
+							console.log(data);
+							if(data[0] == 1){
+								localStorage.setItem("loginName",data[1])
+								window.location = "/";
+							} else if(data == 0){
+								$(".regError").fadeIn();
+								$(".regError").html("用户名已被占用！");
+							} else {
+								alert("服务器崩了！");
+							}
+						}
+					});
+				} 
+			} else {
+				$(".regError").html("注册信息填写不全！");
+				$(".regError").fadeIn();
+			}
+		});
+		$('input').focus(()=>{
+			$(".regError").fadeOut();
+		})
+	</script>
+</body>
+
+</html>

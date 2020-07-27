@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mask</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/resert.css">
+    <link rel="stylesheet" href="/public/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/nav.css">
+    <link rel="stylesheet" href="/public/css/mask.css">
+    <link rel="stylesheet" href="/public/css/footer.css">  
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="navFixed"></nav>
+    <!-- 头部 -->
+    <div class="headBg"></div>
+    <!-- 模块 -->
+    <div class="container mask">
+        <h2 class="maskTitle" id="maskTitle"></h2>
+        <div class="maskContent" id="content"></div>
+    </div>
+    <div class="container">
+        <div class="col-md-10">
+            <h2>评论</h2>
+            <!-- <span>共有xxx条评论</span> -->
+            <div class="messageDiv">
+                <textarea name="messageTxt" id="messageTxt" class="messageTxt" maxlength="150" placeholder="留下您的神评吧 ~~~"></textarea>
+                <div class="messageBtn glyphicon glyphicon-send" id="messageBtn"> 发表评论</div>
+            </div>
+            <h4>精彩评论</h4>
+            <!-- <span>(10)</span> -->
+            <div class="messageList" id="messageList"></div>
+        </div>
+            <!-- <span class="list_like glyphicon glyphicon-thumbs-down">0</span>
+            <span class="list_like glyphicon glyphicon-thumbs-up">0</span> -->
+    </div>
+    <div class="footer"></div>
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script src="/public/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/public/js/nav.js"></script>
+    <script src="/public/js/mask.js"></script>
+    <script src="/public/js/footer.js"></script>
+</body>
+</html>

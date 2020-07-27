@@ -1,0 +1,104 @@
+body{
+    /* background-image: url(../img/bg/img3.jpg);  */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+.headBg{
+    height: 32vh;
+    margin-bottom: 30px;
+    color: whitesmoke;
+    background-image: url("/public/img/bg/banner1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.headTitle,.headTxt{
+    color: whitesmoke;
+    font-size: 36px;
+    margin-top: 30px;
+}
+.headTxt{
+    font-size: 18px; 
+}
+
+/* 注册主体 */
+.login{
+    padding-top: 62px;
+    margin-bottom: 62px;
+    position: relative;
+}
+.login>section>div {
+    margin-bottom:58px;
+}
+.codeFlex{
+    display: flex;
+    justify-content: center;
+}
+input{
+    height: 36px !important;  
+}
+#codeMa{
+    border-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    cursor: pointer;
+}
+
+#codetxt{
+    height: 45px !important;
+    display: inline-block;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 6px 12px;
+    border: 1px solid #ccc; 
+    outline: honeydew;
+}
+
+#btn{
+    outline: honeydew;
+}
+
+
+/* 正则提示 */
+.form-group>div{    
+    position: relative;
+}
+#codeReg,#nameReg,#pwdReg,#_pwdReg{
+    color: #D9534F;
+    position: absolute;
+    left: 10px;
+    top: 45px;
+}
+#codeReg{
+    top: 60px;
+}
+/* 登录数据验证提示 */
+/* 验证消息 */
+.regError{
+    display: none;
+    width: 280px;
+    height: 130px;
+    line-height: 130px;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 20px;
+    background-color: rgba(28,30,29,0.9);
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -140px;
+    margin-top: -20px;
+}
+/* @media (max-width: 465px){
+    .regError{
+        margin-left: -140px;
+    }
+} */

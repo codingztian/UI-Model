@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能UI界面库</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="icon" href="img/weIcon.png"> -->
+    <link rel="stylesheet" href="/public/css/resert.css">
+    <link rel="stylesheet" href="/public/css/animal.css">
+    <link rel="stylesheet" href="/public/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/nav.css">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/public/css/footer.css">   
+</head>
+
+<body>
+    <!-- 导航条 -->
+    <nav class="navFixed"></nav>
+    <!-- 主页背景 -->
+    <header class="header">
+        <!-- 轮播图 -->
+        <div class="lunboView">
+            <div class="lunbo"></div>
+        </div>
+        <div class="jumb">
+            <div class="container jumbotron">
+                <!-- <h2>UI 界 面 智 能 模 板 图 片 库</h2> -->
+                <div class="svgEle">
+                    <svg viewBox="0 0 1000 300">
+                        <symbol id="line_text">
+                           <text text-anchor="middle" x="50%" y="50%" dy=".4em">
+                                UModel 
+                           </text> 
+                        </symbol>
+                        <use xlink:href="#line_text" class="text"></use>
+                        <use xlink:href="#line_text" class="text"></use>
+                        <use xlink:href="#line_text" class="text"></use>
+                        <use xlink:href="#line_text" class="text"></use>
+                    </svg>
+                </div>
+                <form class="searchDiv navbar-form" action="/search" method="GET">
+                    <input type="text" name="search" class="searchinp" placeholder="输入您要检索的关键字">
+                    <button type="submit" class="btnSear btn btn-default">
+                        <dvi class="searPic">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </form>
+                <!-- <p>建議:愛  質地  自由背景  紋理  白色背景  景觀  更多</p> -->           
+                <button class="btnLeft glyphicon glyphicon-menu-left"></button>
+                <button class="btnRight glyphicon glyphicon-menu-right"></button>
+            </div>
+        </div>
+    </header>
+    <!-- 模板类 -->
+    <section class="main" id="modelTo"> 
+        <p class="container mainTITLE">UModel class</p>
+        <p class="container modleTXT" id="modleTXT"></p>
+        <div class="container conMain model" id="model"></div>
+        <div class="container modelMore"></div>
+        <div class="mask" id="mask"></div>  <!-- model详细图 -->
+    </section>
+    <!-- 创作灵感 -->
+    <section class="adv">
+        <p class="container mainTITLE">创作灵感</p>
+        <p class="mainTXT">高兼容响应式　界面化向导　智能化匹配</p>
+        <div class="container conMain advUI">
+            <div class="advUI_div">
+                <div class="glyphicon glyphicon-home"></div>
+                <div class="glyphicon glyphicon-blackboard"></div>
+                <div class="glyphicon glyphicon-phone"></div>
+                <div class="glyphicon glyphicon-headphones"></div>
+                <div class="glyphicon glyphicon-camera"></div>
+            </div>
+            <div class="advUI_title">
+                <p>UI界面的智能化产品</p>
+                <p>响应式开发 兼容PC及移动端设计</p>
+                <p>界面的向导 Web开发的IDE</p>
+            </div>
+        </div>
+    </section>
+    <!-- 视觉 -->
+    <section class="mainView" id="viewTo">
+        <p class="container mainTITLE">UModel Case</p>
+        <p class="mainTXT">Create a visual feast & Touches your soul</p>
+        <div class="container conMain viewUI" id="viewUI"></div>
+    </section>
+    <!-- 创作灵感 -->
+    <section class="adv">
+        <p class="container mainTITLE">产品导向</p>
+        <div class="container conMain advUI">
+            <div class="advUI_div">
+                <div class="glyphicon glyphicon-cog"></div>
+                <div class="glyphicon glyphicon-send"></div>
+                <div class="glyphicon glyphicon-cloud"></div>
+            </div>
+            <div class="advUI_title">
+                <p>UI界面的智能化产品</p>
+                <p>响应式开发 兼容PC及移动端设计</p>
+                <p>界面的向导 Web开发的IDE</p>
+            </div>
+        </div>
+    </section>
+    <section class="demo" id="demoTo">
+        <p class="container mainTITLE">UModel Demo</p>
+        <div class="container conMain">
+            <div class="col-sm-6 col-md-4">
+                <div class="modelPho">
+                    <div class="modelSrc">
+                        <a href="http://codingztian.com:3000/Demo/fly%20War/index.html" target="_black">
+                            <img src="/public/img/bg/demo1.png" alt="飞机大战" title="飞机大战"></img>
+                        </a>
+                    </div>
+                    <p class="modelP">飞机大战</p>
+                    <p class="modelP">一款由腾讯公司微信团队开发的射击操作类游戏</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4"> 
+                <div class="modelPho">
+                    <div class="modelSrc">
+                        <a href="http://codingztian.com:3000/Demo/2048Game/index.html" target="_black">
+                            <img src="/public/img/bg/demo2.png" alt="2048" title="2048"></img>
+                        </a>
+                    </div>
+                    <p class="modelP">2048</p>
+                    <p class="modelP">一款比较流行的数字游戏</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="modelPho">
+                    <div class="modelSrc">
+                        <a href="http://codingztian.com:3000/Demo/fly%20War/tree.html" target="_black">
+                            <img src="/public/img/bg/demo3.png" alt="TREE"" title="TREE"></img>
+                        </a>
+                    </div>
+                    <p class="modelP">TREE</p>
+                    <p class="modelP">ECharts 是一个开源基金会孵化的项目</p>
+                </div>
+            </div>
+        </div>
+        <div class="container modelMore"><div class="glyphicon glyphicon-align-center" id="more"> MORE</div></div>
+    </section>
+    <!-- 脚注 -->
+    <footer class="footer"></footer> 
+    <div class="bgImg"></div>
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script src="/public/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/public/js/nav.js"></script>
+    <script src="/public/js/index.js"></script>
+    <script src="/public/js/footer.js"></script>
+</body>
+</html>

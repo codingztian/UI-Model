@@ -1,0 +1,123 @@
+body{
+    position: relative;
+}
+/* 导航条 */
+.navFixed{
+    width: 100%;
+    position:fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+/* 导航条背景色 */
+.navbar {
+    /* min-height: 10vh; */
+    background-color: rgba(0, 0, 0, 0);
+}
+@media (max-width: 768px){
+    .navbar{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+.navbar-default {
+    border: hidden;
+}
+/* logo */
+.navbar-brand {
+    /* width: 100px; */
+    font-size: 32px;
+    color: whitesmoke !important;
+    font-weight: 600;
+    /* font-family: "Ink free"; */
+    /* font-family: "segoe print"; */
+    font-family: "segoe script";
+    transition: all 0.5s;
+}
+
+/* 导航条标题 */
+.navbar-nav a,.dropdown-menu a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e2e2e2 !important;
+    font-family: Lato, sans-serif;
+    font-family: "segoe print";
+    /* text-transform: uppercase; */
+    transition: all 0.5s;
+}
+
+.navbar-nav>.open>a {
+    background-color: transparent !important;
+    color: #272822 !important;
+}
+
+.navbar-nav a:hover {
+    color: #ff510f !important;
+}
+/* 下拉框 */
+.dropdown-menu {
+    min-width: 100px;
+    background-color: rgba(100, 100, 100,0.6);
+}
+
+.dropdown-menu>li>a:hover {
+    background-color: transparent;
+}
+@media (max-width: 768px){
+    .navbar-collapse{
+        width: auto;
+    }
+}
+
+
+/* search框 */
+.nav_searchDiv{
+    margin: 2px 15px;
+    display: flex;
+}
+.nav_searchinp{
+    min-height: 57px;
+    line-height: 22px;
+    font-weight: 300;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    outline: honeydew;
+    border: hidden;
+    color: #1a1a1a;
+    padding: .9rem 2.5rem;
+    font-size: 17px;
+    font-family: inherit;
+}
+.nav_btnSear{
+    outline: honeydew;
+    border: hidden;
+    border-radius: 0px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.nav_searPic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+@media (max-width: 1024px){
+    .nav_searchDiv{
+        margin: 2px 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav_searchDiv{
+        /* display: none; */
+        display: flex;
+    }
+}
+@media (max-width: 480px){
+    .nav_searchDiv{
+        /* display: flex; */
+        margin: 2px 15px;
+    }
+}

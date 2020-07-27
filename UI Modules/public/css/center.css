@@ -1,0 +1,38 @@
+body{
+    background-color: #FFF;
+}
+.headBg{
+    height: 40vh;
+    margin-bottom: 30px;
+    color: whitesmoke;
+    background-image: url("/public/img/bg/img3.jpg");
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.personPho{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("/public/img/bg/per1.png");
+    margin:15px 0 15px;
+    cursor: pointer;
+}
+.personName{
+    font-size: 28px;
+    font-weight: 600;
+    font-family: "segoe print";
+    cursor: pointer;
+}
+.main{
+    padding-bottom: 60px;
+}
+#sec>div{
+    margin: 30px 0;;
+}
+#btn{
+    outline: honeydew;
+}

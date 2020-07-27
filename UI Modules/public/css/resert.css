@@ -1,0 +1,54 @@
+/* 兼容重置 */
+html,body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,hr,br,p,u,i,img,a,form,input,tbody,tr,td,th,p,iframe,header,aside{
+    padding: 0;
+    margin: 0;
+    /* filter: grayscale(100%); */
+    /*font-size: 12px;*/
+    /* box-sizing: border-box; */
+
+    /* perspective: 800px;
+    transform-style: preserve-3d;
+    perspective-origin: center center; */
+}
+/* 重置 a 链接 */
+a{
+color: #FFF;
+/*font-size: 12px;*/
+text-decoration: none;
+}
+/* 重置 li 列表 */
+li{
+list-style: none;
+}
+iframe{
+	width: 100%;
+	border: none;
+}
+/* 清除浮动 */
+.clearfix:after{
+content: "";
+display: block;
+clear: both;
+}
+/* 表单 placeholder */
+input::-webkit-input-placeholder {
+    color: #ccc;
+ }
+input::-moz-input-placeholder {
+    color: #ccc;
+ }
+input::-ms-input-placeholder {
+    color: #ccc;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #343D46;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-track-pieces{
+    background-color: transparent;
+} 

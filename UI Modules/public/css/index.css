@@ -1,0 +1,446 @@
+.bgImg{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    background-image: url("/public/img/bg/ou1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header {
+    background-color: #D9D9E3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+/* 背景 */
+.lunboView{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute; 
+    background-color: #CCCCCC;  
+}
+.lunbo{
+    height: 100%;
+    position: absolute;
+}
+.lunboItem{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+/* 巨幕 */
+.jumb{
+    position: relative;
+}
+.jumbotron{
+    width: 48%;
+    margin: 0 auto;
+    color: #F5F5F7;
+    background-color: transparent !important;
+    min-height: 43em;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+/* SVG */
+.svgEle{
+    font-size: 150px;
+    font-weight: 600;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: "Ink free";
+    font-family: "segoe print";
+    /* font-family: "segoe script"; */
+    /* text-transform: uppercase; */
+}
+.text{
+    fill: none;
+    stroke-width: 5;
+    stroke-dasharray: 0 240;
+    stroke-dashoffset: 0;
+}
+.text:nth-child(4n+1){
+    stroke: rgb(39, 135, 230);
+    animation: run1 3s ease-in-out forwards;
+}
+.text:nth-child(4n+2){
+    stroke: rgb(47, 169, 92);
+    animation: run2 3s ease-in-out forwards;
+}
+.text:nth-child(4n+3){
+    stroke: rgb(249, 189, 56);
+    animation: run3 3s ease-in-out forwards;
+}
+.text:nth-child(4n+4){
+    stroke: rgb(235, 61, 50);
+    animation: run4 3s ease-in-out forwards;
+}
+
+@keyframes run1 {
+    to{
+        stroke-dashoffset: 1000;
+        stroke-dasharray: 60 180;
+    }
+}
+@keyframes run2 {
+    to{
+        stroke-dashoffset: 1060;
+        stroke-dasharray: 60 180;
+    }
+}@keyframes run3 {
+    to{
+        stroke-dashoffset: 1120;
+        stroke-dasharray: 60 180;
+    }
+}@keyframes run4 {
+    to{
+        stroke-dashoffset: 1180;
+        stroke-dasharray: 60 180;
+    }
+}
+/* search inp */
+.searchDiv{
+    padding: 0;
+    display: flex;
+    /* justify-content: center; */
+}
+.searchinp{
+    /* display: block; */
+    width: 100%;
+    min-height: 57px;
+    line-height: 22px;
+    font-weight: 300;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    outline: honeydew;
+    border: hidden;
+    color: #1a1a1a;
+    padding: .9rem 2.5rem;
+    font-size: 17px;
+    font-family: inherit;
+}
+.btnSear{
+    outline: honeydew;
+    border: hidden;
+    border-radius: 0px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.searPic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    cursor: pointer;
+    z-index: 1;
+
+}
+@media (max-width: 1200px){
+    .jumbotron{
+        width: 64%;
+    }
+}
+/* > < btn */
+.btnLeft,.btnRight{
+    color: #F5F5F7;
+    font-size: 22px;
+    position: absolute;
+    width: 55px;
+    height: 110px;
+    top: 50%;
+    margin-top: -55px;
+    outline: honeydew;
+    border:hidden;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+.btnLeft:hover,.btnRight:hover{
+    color: #ff510f;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.btnLeft{
+    left: 0;
+}
+.btnRight{
+    right: 0;
+}
+
+
+/* 主体 */
+.conMain{
+    min-height: 40vh;
+}
+.mainTITLE{
+    text-align: center;
+    padding: 100px 0 35px;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Roboto Slab", serif;
+}
+
+
+/* model */
+.main{
+    background-color: #EAE9E9;
+    position: relative;
+}
+.modleTXT{
+    margin-bottom: 30px;
+}
+.modleTXT>span{
+    font-size: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.modleTXT>span:hover{
+    color: #ff510f;
+}
+.mainTXT{
+    text-align: center;
+}
+/* model 动画 */
+.model{
+    /* visibility: hidden; */
+    overflow: hidden;
+    /* transform: translateY(460px); */
+    position: relative;
+}
+@keyframes modelRun{
+    to{
+        visibility: visible;
+        transform: translateY(0);
+    }
+} 
+.modelPho{
+    height: 300px;
+    padding: 0;
+    margin: 0 0px 50px;
+    break-inside: avoid;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px gray; 
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    transition: 0.3s all; 
+}
+.modelPho:hover {
+    top: 5px;
+    box-shadow: 10px 10px 10px gray;   
+}
+.modelSrc{
+    height: 230px;
+    overflow: hidden;
+    background-color: #cccccc;
+}
+.modelSrc>a>img,.modelSrc>img{
+    width: 100%;
+}
+.modelP{
+    text-align: center;
+    margin: 10px;
+}
+.modelS{
+    color: #ff510f;
+}
+.maskDiv{
+    width: 100%;
+    height: 230px;
+    background-color: rgba(230,230,230, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: -230px;
+    transition: 0.5s top;
+}
+.modelPho:hover .maskDiv {
+    top: 0;
+} 
+.modelMore{
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+#more{
+    font-size: 16px;
+    cursor: pointer;
+}
+#more:hover{
+    color: tomato;
+}
+/* model详细图 */
+.mask{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(125,125,125,0.7);
+    display: none;
+    z-index: 10;
+    text-align: center;
+}
+.maskBottom{
+    border: 1px solid gray;
+    background-color: rgba(125,125,125,0.2);
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+.maskleft,.maskright{
+    height: 30px;
+    font-size: 16px;
+    color: #ff510f;
+    border: 1px solid #ff510f;
+    /* background-color: #FFF; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    transition: 0.3s all;
+}
+.maskleft:hover,.maskright:hover{
+    background-color: #ff510f;
+    color: white;
+}
+.maskleft{
+    left: 5%;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+.maskright{
+    width: 30px;
+    text-align: center;
+    border-radius: 15px;
+    right: 7%;
+    
+}
+.mask>img{
+    cursor: pointer;    
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    height: 85%;
+}
+@media (max-width: 1024px){
+    .mask>img{
+        /* width: 100%; */
+        height: 100%;
+    }
+}
+/* 无数据显示 */
+.messageDage{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 30px;
+    font-weight: 600px;
+}
+
+
+/* UI Soul */
+.adv{
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+.advUI{
+    visibility: hidden;
+}
+.advUI_div{
+    display: flex;
+    justify-content: space-around;
+}
+.advUI_div>div{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 46px;
+    cursor: pointer;
+}
+.advUI_div>div:hover{
+    color: #ff510f;
+}
+.advUI_title{
+    height: 180px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.advUI_title>p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+/* UI Case */
+.mainView{
+    overflow: hidden;
+    background-color: #FFF;
+}
+.viewRow{
+    visibility: hidden;
+}
+.viewLeft{
+    min-height: 60vh;
+    /* border: 1px solid orangered;  */
+}
+.viewRight{
+    min-height: 60vh;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px){
+    .viewRight{
+        justify-content: flex-start;
+        min-height: 30vh;
+    }
+}
+.viewLeft_0,.viewLeft_1,.viewLeft_2,.viewLeft_3,.viewLeft_4{ 
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: center; 
+    position: relative; 
+}
+.viewLeft_0{
+    background-image: url(/public/img/bg/app2.png);
+}
+.viewLeft_1{
+    background-image: url(/public/img/bg/app3.png);
+}
+.viewLeft_2{
+    background-image: url(/public/img/bg/app5.jpg);
+}
+.viewLeft_3{
+    background-image: url(/public/img/bg/app3.png);
+}
+.viewLeft_4{
+    background-image: url(/public/img/bg/app2.png);
+}
+
+/* UI Demo */
+.demo{
+    background-color: #EAE9E9;
+    /* padding-bottom: 100px; */
+}
+
